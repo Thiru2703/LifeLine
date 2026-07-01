@@ -1,0 +1,165 @@
+.requests-container {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 40px 20px;
+}
+
+.requests-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.requests-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 10px;
+}
+
+.requests-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.loading-state,
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.requests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.request-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.request-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.blood-group-large {
+  font-size: 48px;
+  font-weight: 700;
+  color: #e63946;
+}
+
+.units-badge {
+  background: #e63946;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.request-details {
+  margin-bottom: 25px;
+}
+
+.patient-info {
+  margin-bottom: 20px;
+}
+
+.patient-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px;
+}
+
+.hospital-name {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.request-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meta-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.meta-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.meta-value {
+  color: #333;
+  font-weight: 600;
+}
+
+.respond-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.respond-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(240, 147, 251, 0.4);
+}
+
+@media (max-width: 768px) {
+  .requests-title {
+    font-size: 32px;
+  }
+
+  .requests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blood-group-large {
+    font-size: 36px;
+  }
+}
